@@ -13,6 +13,8 @@ For this example I've borrowed from the WCF WebAPI [code](http://wcf.codeplex.co
 * In the Global.asax.cs file we've added some routing to complement the standard MVC routes:
 
 		routes.Add(new ServiceRoute("api/emails", new HttpServiceHostFactory() { Configuration = config }, typeof(PostmarkApi)));
+		
+* This route corresponds to the API/PostmarkApi structure of the application. In this example, our end point will be http://localhost:8080/api/emails . (The project is configured to use port 8080 for example purposes)
 
 ## Notes
 * While this is good example code for creating an API end point, it shouldn't be used verbatim in your project. I've demonstrated saving a file attachment directly in the web method but this should be handled less ridgedly by your own processor or repository classes.
